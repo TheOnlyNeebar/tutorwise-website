@@ -8,7 +8,7 @@
   <meta name="keywords" content="brampton tutoring, tutorwise, tutoring near me, online tutoring, math tutor, science tutor, K-12 help, ESL tutoring" />
   <meta name="author" content="TutorWise" />
 
-  <!-- Favicon (replace with your favicon.png or favicon.ico in root) -->
+  <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png">
 
   <!-- Fonts -->
@@ -16,187 +16,36 @@
 
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
-
-    body{
-      font-family:'Quicksand', sans-serif;
-      background:#f5bd5f; /* Branding yellow */
-      color:#333;
-      max-width:1000px;
-      margin:auto;
-    }
-
-    :root{
-      --brand-yellow:#f5bd5f;
-      --brand-blue:#0a3bda;
-    }
-
-    /* ===== NAVIGATION ===== */
-    .tw-nav{
-      background:#fff;
-      border-radius:12px;
-      padding:10px 16px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
-      margin:12px auto 0;
-      max-width:1000px;
-    }
-    .tw-links{
-      list-style:none;
-      display:flex;
-      gap:14px;
-      margin:0;
-      padding:0;
-      font-weight:700;
-      flex-wrap:wrap;
-    }
-    .tw-links a{
-      color:var(--brand-blue);
-      text-decoration:none;
-      padding:8px 12px;
-      border-radius:10px;
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      transition:transform .15s ease, background .15s ease;
-    }
-    .tw-links a:hover{
-      transform:scale(1.08);
-      background:rgba(10,59,218,.10);
-    }
-    .tw-links a svg{
-      width:18px;height:18px;fill:currentColor;
-    }
-    .tw-menu-toggle{
-      display:none;
-      position:absolute;
-      right:12px;
-      top:50%;
-      transform:translateY(-50%);
-      font-size:26px;
-      border:none;
-      background:var(--brand-blue);
-      color:#fff;
-      border-radius:8px;
-      padding:6px 10px;
-      cursor:pointer;
-    }
+    body{font-family:'Quicksand', sans-serif;background:#f5bd5f;color:#333;max-width:1000px;margin:auto;}
+    :root{--brand-yellow:#f5bd5f;--brand-blue:#0a3bda;}
+    .tw-nav{background:#fff;border-radius:12px;padding:10px 16px;display:flex;justify-content:center;align-items:center;position:relative;margin:12px auto 0;max-width:1000px;}
+    .tw-links{list-style:none;display:flex;gap:14px;margin:0;padding:0;font-weight:700;flex-wrap:wrap;}
+    .tw-links a{color:var(--brand-blue);text-decoration:none;padding:8px 12px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;transition:transform .15s ease, background .15s ease;}
+    .tw-links a:hover{transform:scale(1.08);background:rgba(10,59,218,.10);}
+    .tw-links a svg{width:18px;height:18px;fill:currentColor;}
+    .tw-menu-toggle{display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:26px;border:none;background:var(--brand-blue);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;}
     @media(max-width:768px){
       .tw-menu-toggle{display:block;}
-      .tw-links{
-        display:none;
-        position:absolute;
-        left:0;right:0;top:100%;
-        background:var(--brand-blue);
-        border-radius:12px;
-        flex-direction:column;
-        padding:10px;
-        margin-top:8px;
-        z-index:50;
-      }
+      .tw-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--brand-blue);border-radius:12px;flex-direction:column;padding:10px;margin-top:8px;z-index:50;}
       .tw-links.active{display:flex;}
-      .tw-links a{
-        color:#fff;
-        background:transparent;
-        padding:12px 14px;
-        border-radius:10px;
-      }
-      .tw-links a:hover{
-        background:rgba(255,255,255,.12);
-        transform:scale(1.05);
-      }
+      .tw-links a{color:#fff;background:transparent;padding:12px 14px;border-radius:10px;}
+      .tw-links a:hover{background:rgba(255,255,255,.12);transform:scale(1.05);}
     }
-
-    /* ===== HEADER ===== */
-    header{
-      text-align:center;
-      padding:40px 20px;
-    }
-    .brand-wrap{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:12px;
-      margin-bottom:10px;
-    }
-    .brand-wrap img{
-      height:70px;
-    }
-    header p{
-      font-size:1.2rem;
-      margin-top:5px;
-    }
-
-    /* ===== SECTIONS ===== */
-    section{
-      background:white;
-      padding:40px 50px;
-      border-radius:8px;
-      margin:40px 0;
-      box-shadow:0 0 10px rgba(0,0,0,0.05);
-    }
-    section h2{
-      color:var(--brand-blue);
-      margin-bottom:20px;
-      font-size:2rem;
-    }
+    header{text-align:center;padding:40px 20px;}
+    .brand-wrap{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px;}
+    .brand-wrap img{height:70px;}
+    header p{font-size:1.2rem;margin-top:5px;}
+    section{background:white;padding:40px 50px;border-radius:8px;margin:40px 0;box-shadow:0 0 10px rgba(0,0,0,0.05);}
+    section h2{color:var(--brand-blue);margin-bottom:20px;font-size:2rem;}
     section p{font-size:1.1rem;line-height:1.6;}
-
-    /* List section */
-    .info-list{
-      list-style:disc inside;
-      font-size:1.1rem;
-      line-height:1.8;
-      color:#333;
-    }
-
-    /* Buttons */
-    .call-button{
-      display:inline-block;
-      margin-top:15px;
-      background-color:var(--brand-blue);
-      color:#fff;
-      padding:12px 20px;
-      border-radius:8px;
-      font-weight:bold;
-      text-decoration:none;
-      transition:background-color .3s ease;
-    }
+    .info-list{list-style:disc inside;font-size:1.1rem;line-height:1.8;color:#333;}
+    .call-button{display:inline-block;margin-top:15px;background-color:var(--brand-blue);color:#fff;padding:12px 20px;border-radius:8px;font-weight:bold;text-decoration:none;transition:background-color .3s ease;}
     .call-button:hover{background-color:#072c9e;}
-
-    /* Forms */
-    input,textarea{
-      padding:10px;
-      font-size:1rem;
-      border:1px solid #ccc;
-      border-radius:6px;
-      font-family:'Quicksand', sans-serif;
-    }
-    input[type="submit"]{
-      background-color:var(--brand-blue);
-      color:#fff;
-      font-weight:bold;
-      cursor:pointer;
-      border:none;
-      transition:background-color .3s ease;
-    }
+    input,textarea{padding:10px;font-size:1rem;border:1px solid #ccc;border-radius:6px;font-family:'Quicksand', sans-serif;}
+    input[type="submit"]{background-color:var(--brand-blue);color:#fff;font-weight:bold;cursor:pointer;border:none;transition:background-color .3s ease;}
     input[type="submit"]:hover{background-color:#072c9e;}
-
-    iframe{
-      border:0;
-      width:100%;
-      height:300px;
-      margin-top:30px;
-      border-radius:8px;
-    }
-
-    footer{
-      text-align:center;
-      color:#333;
-      font-size:0.9rem;
-      margin:40px 0 20px;
-    }
+    iframe{border:0;width:100%;height:300px;margin-top:30px;border-radius:8px;}
+    footer{text-align:center;color:#333;font-size:0.9rem;margin:40px 0 20px;}
     footer a{color:var(--brand-blue);font-weight:bold;text-decoration:none;}
     footer a:hover{text-decoration:underline;}
   </style>
@@ -223,14 +72,8 @@
   <!-- HEADER -->
   <header>
     <div class="brand-wrap">
-      <!-- TutorWise wording -->
       <img src="images/tutorwise_wording.png" alt="TutorWise Wording" class="site-logo">
-
-<!-- Logo beside wording -->
       <img src="images/logo.png" alt="Logo" class="site-logo">
-
-<!-- Favicon in <head> -->
-      <link rel="icon" href="logo.png" type="image/png">
     </div>
     <p>Empowering Students, One Lesson at a Time</p>
   </header>
@@ -270,7 +113,6 @@
       <a href="tel:6476778767" class="call-button">📞 Call Now</a>
     </div>
 
-    <!-- Contact Form -->
     <form action="https://formspree.io/f/myzjqqle" method="POST" style="display:flex; flex-direction:column; gap:15px; margin-bottom: 30px;">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -279,7 +121,6 @@
       <input type="submit" value="Send Message" />
     </form>
 
-    <!-- Embedded Map -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6741571532863!2d-79.72066482336832!3d43.73143324814386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b14fc47c888b3%3A0xb617bd4eb88cf4e!2s14%20Automatic%20Rd%2C%20Brampton%2C%20ON%20L6S%205N5!5e0!3m2!1sen!2sca!4v1720546547681!5m2!1sen!2sca"
       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -292,7 +133,6 @@
     <a href="https://www.facebook.com/profile.php?id=61577905306174" target="_blank">Facebook</a>
   </footer>
 
-  <!-- Nav Script -->
   <script>
     const twToggle=document.getElementById('tw-toggle');
     const twLinks=document.getElementById('tw-links');
